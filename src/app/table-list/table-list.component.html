@@ -4,8 +4,8 @@
           <div class="col-md-12">
               <div class="card">
                   <div class="card-header card-header-danger">
-                      <h4 class="card-title ">Simple Table</h4>
-                      <p class="card-category"> Here is a subtitle for this table</p>
+                      <h4 class="card-title ">Backlog</h4>
+                      <p class="card-category">A backlog is a list of tasks required to support a larger strategic plan. For example, a product development context contains a prioritized list of items. The product team agrees to work on these projects next. Typical items on a product backlog user stories, changes to existing functionality, and bug fixes.</p>
                   </div>
                   <div class="card-body">
                       <div class="table-responsive">
@@ -15,119 +15,41 @@
                                       ID
                                   </th>
                                   <th>
-                                      Name
+                                      Title
                                   </th>
                                   <th>
-                                      Country
+                                      Description
                                   </th>
                                   <th>
-                                      City
+                                      Assignee
                                   </th>
                                   <th>
-                                      Salary
+                                      Actions
                                   </th>
                               </thead>
                               <tbody>
-                                  <tr>
+                                  <tr *ngFor="let task of tasks">
                                       <td>
-                                          1
-                                      </td>
-                                      <td>
-                                          Dakota Rice
+                                          {{task.id}}
                                       </td>
                                       <td>
-                                          Niger
+                                          {{task.title}}
                                       </td>
                                       <td>
-                                          Oud-Turnhout
-                                      </td>
-                                      <td class="text-primary">
-                                          $36,738
-                                      </td>
-                                  </tr>
-                                  <tr>
-                                      <td>
-                                          2
+                                          {{task.description}}
                                       </td>
                                       <td>
-                                          Minerva Hooper
+                                          {{task.assignee}}
                                       </td>
                                       <td>
-                                          Curaçao
-                                      </td>
-                                      <td>
-                                          Sinaai-Waas
-                                      </td>
-                                      <td class="text-primary">
-                                          $23,789
-                                      </td>
-                                  </tr>
-                                  <tr>
-                                      <td>
-                                          3
-                                      </td>
-                                      <td>
-                                          Sage Rodriguez
-                                      </td>
-                                      <td>
-                                          Netherlands
-                                      </td>
-                                      <td>
-                                          Baileux
-                                      </td>
-                                      <td class="text-primary">
-                                          $56,142
-                                      </td>
-                                  </tr>
-                                  <tr>
-                                      <td>
-                                          4
-                                      </td>
-                                      <td>
-                                          Philip Chaney
-                                      </td>
-                                      <td>
-                                          Korea, South
-                                      </td>
-                                      <td>
-                                          Overland Park
-                                      </td>
-                                      <td class="text-primary">
-                                          $38,735
-                                      </td>
-                                  </tr>
-                                  <tr>
-                                      <td>
-                                          5
-                                      </td>
-                                      <td>
-                                          Doris Greene
-                                      </td>
-                                      <td>
-                                          Malawi
-                                      </td>
-                                      <td>
-                                          Feldkirchen in Kärnten
-                                      </td>
-                                      <td class="text-primary">
-                                          $63,542
-                                      </td>
-                                  </tr>
-                                  <tr>
-                                      <td>
-                                          6
-                                      </td>
-                                      <td>
-                                          Mason Porter
-                                      </td>
-                                      <td>
-                                          Chile
-                                      </td>
-                                      <td>
-                                          Gloucester
-                                      </td>
-                                      <td class="text-primary">
-                                          $78,615
+                                          <button mat-raised-button type="submit" class="btn btn-white btn-round btn-just-icon">
+                                            <i class="material-icons">edit</i>
+                                            <div class="ripple-container"></div>
+                                          </button>
+                                          <button mat-raised-button type="submit" class="btn btn-white btn-round btn-just-icon">
+                                            <i class="material-icons">delete</i>
+                                            <div class="ripple-container"></div>
+                                          </button>
                                       </td>
                                   </tr>
                               </tbody>
@@ -139,130 +61,46 @@
           <div class="col-md-12">
               <div class="card card-plain">
                   <div class="card-header card-header-danger">
-                      <h4 class="card-title mt-0"> Table on Plain Background</h4>
-                      <p class="card-category"> Here is a subtitle for this table</p>
+                      <h4 class="card-title mt-0">Contributors</h4>
+                      <p class="card-category">Contribution activity is a great way to see what someone has been up to on Github. You can see a really consie view of proposed Pull Requests, open issues and commits.</p>
                   </div>
                   <div class="card-body">
                       <div class="table-responsive">
                           <table class="table table-hover">
                               <thead class="">
                                   <th>
-                                      ID
+                                      First Name
                                   </th>
                                   <th>
-                                      Name
+                                      Last name
                                   </th>
                                   <th>
-                                      Country
+                                      Username
                                   </th>
                                   <th>
-                                      City
-                                  </th>
-                                  <th>
-                                      Salary
+                                      Actions
                                   </th>
                               </thead>
                               <tbody>
-                                  <tr>
+                                  <tr *ngFor="let contributor of contributors">
                                       <td>
-                                          1
+                                          {{contributor.firstName}}
                                       </td>
                                       <td>
-                                          Dakota Rice
+                                          {{contributor.lastName}}
                                       </td>
                                       <td>
-                                          Niger
+                                          {{contributor.userName}}
                                       </td>
                                       <td>
-                                          Oud-Turnhout
-                                      </td>
-                                      <td>
-                                          $36,738
-                                      </td>
-                                  </tr>
-                                  <tr>
-                                      <td>
-                                          2
-                                      </td>
-                                      <td>
-                                          Minerva Hooper
-                                      </td>
-                                      <td>
-                                          Curaçao
-                                      </td>
-                                      <td>
-                                          Sinaai-Waas
-                                      </td>
-                                      <td>
-                                          $23,789
-                                      </td>
-                                  </tr>
-                                  <tr>
-                                      <td>
-                                          3
-                                      </td>
-                                      <td>
-                                          Sage Rodriguez
-                                      </td>
-                                      <td>
-                                          Netherlands
-                                      </td>
-                                      <td>
-                                          Baileux
-                                      </td>
-                                      <td>
-                                          $56,142
-                                      </td>
-                                  </tr>
-                                  <tr>
-                                      <td>
-                                          4
-                                      </td>
-                                      <td>
-                                          Philip Chaney
-                                      </td>
-                                      <td>
-                                          Korea, South
-                                      </td>
-                                      <td>
-                                          Overland Park
-                                      </td>
-                                      <td>
-                                          $38,735
-                                      </td>
-                                  </tr>
-                                  <tr>
-                                      <td>
-                                          5
-                                      </td>
-                                      <td>
-                                          Doris Greene
-                                      </td>
-                                      <td>
-                                          Malawi
-                                      </td>
-                                      <td>
-                                          Feldkirchen in Kärnten
-                                      </td>
-                                      <td>
-                                          $63,542
-                                      </td>
-                                  </tr>
-                                  <tr>
-                                      <td>
-                                          6
-                                      </td>
-                                      <td>
-                                          Mason Porter
-                                      </td>
-                                      <td>
-                                          Chile
-                                      </td>
-                                      <td>
-                                          Gloucester
-                                      </td>
-                                      <td>
-                                          $78,615
+                                        <button mat-raised-button type="submit" class="btn btn-white btn-round btn-just-icon">
+                                            <i class="material-icons">edit</i>
+                                            <div class="ripple-container"></div>
+                                        </button>
+                                        <button mat-raised-button type="submit" class="btn btn-white btn-round btn-just-icon">
+                                            <i class="material-icons">delete</i>
+                                            <div class="ripple-container"></div>
+                                        </button>
                                       </td>
                                   </tr>
                               </tbody>
