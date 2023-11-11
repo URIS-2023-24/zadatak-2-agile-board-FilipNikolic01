@@ -13,6 +13,8 @@ import {MatRippleModule} from '@angular/material/core';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatSelectModule} from '@angular/material/select';
+import { TableListDialogComponent } from 'app/table-list-dialog/table-list-dialog.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   imports: [
@@ -26,12 +28,14 @@ import {MatSelectModule} from '@angular/material/select';
     MatInputModule,
     MatSelectModule,
     MatTooltipModule,
+    MatDialogModule
   ],
   declarations: [
     DashboardComponent,
     UserProfileComponent,
     TableListComponent,
     NotificationsComponent,
+    TableListDialogComponent,
   ]
 })
 
